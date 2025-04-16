@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/register.css">
+    <script src="https://kit.fontawesome.com/b07fb295cb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1 class="title">Olympia Gym</h1>
+    <div class="container">
+        <h2>Register</h2>
+        <form action="/auth/register" method="POST">
+            <div class="input-group">
+                        <div class="input-field" id="nameField">
+                            <i class="fa-solid fa-user"></i>
+                            <input id='name' type="text" placeholder="Name" required pattern="[A-Za-z\s]+" name="name">
+                            </div>
+                        <small id="nameError" class="error-message">Only letters and spaces allowed!</small>
+                        
+                        <div class="input-field">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input id="email" type="text" placeholder="Email" name="email" required pattern="[A-Za-z0-9]+@[A-Za-z0-9]+\.[A-Za-z]{2,}">
+
+                        </div>
+
+                        <div class="input-field">
+                            <i class="fa-solid fa-lock"></i>
+                           <input id="password" type="password" placeholder="Password" name="password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
+                        </div>
+
+                        <div class="input-field">
+                            <i class="fa-solid fa-lock"></i>
+                            <input id="passwordConfirm" type="password" placeholder="Confirm Password" name="passwordConfirm" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
+                        </div>
+                <button type="submit">Register</button>
+            
+        </form>
+            <p>Already have an account? <a href="/login">Login here</a></p>
+            </div>
+        </form>
+
+        {{#if message}}
+            <h4 class="alert alert-danger mt-4">{{message}}</h4>
+        {{/if}}
+
+        <script>
+       document.addEventListener("DOMContentLoaded", function () {
+    let nameInput = document.getElementById("name");
+    let nameError = document.getElementById("nameError");
+    let namePattern = /^[A-Za-z\s]+$/; // Only allows letters and spaces
+
+    nameInput.addEventListener("input", function () {
+        let nameValue = nameInput.value.trim(); // Trim spaces from start and end
+
+        if (nameValue === "") {
+            nameError.style.display = "none"; // Hide error if empty
+            nameInput.classList.remove("invalid", "valid");
+        } else if (!namePattern.test(nameValue)) {
+            nameError.style.display = "block"; // Show error when typing invalid input
+            nameInput.classList.add("invalid");
+            nameInput.classList.remove("valid");
+        } else {
+            nameError.style.display = "none"; // Hide error when input is correct
+            nameInput.classList.add("valid");
+            nameInput.classList.remove("invalid");
+        }
+    });
+});
+
+
+
+    </script>
+    </body>
+</html>

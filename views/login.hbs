@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="/login.css" class="stylesheet">
+    <script src="https://kit.fontawesome.com/b07fb295cb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1 class="title">Olympia Gym</h1>
+    <div class="container">
+        <h2>Login</h2>
+        {{#if message}}
+            <p style="color: red;">{{message}}</p>
+        {{/if}}
+        <form action="/auth/login" method="POST">
+            <div class="input-group">
+                <div class="input-field">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input id='email' type="email" placeholder="Email" name="email" required>
+                </div>
+
+                <div class="input-field">
+                    <i class="fa-solid fa-lock"></i>
+                    <input id="password" type="password" placeholder="Password" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

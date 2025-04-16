@@ -1,0 +1,145 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f4f6;
+    flex-direction: column;
+}
+
+.title{
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Container */
+.container {
+    background: #fff;
+    padding: 30px;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-image: linear-gradient(rgba(0,0,50,0.8), rgba(0,0,50,0.8)), url(Loginpage/background.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/* Heading */
+h2 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Input Group */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Input Field */
+.input-field {
+    display: flex;
+    align-items: center;
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.input-field i {
+    margin-right: 10px;
+    color: #333;
+}
+
+.input-field input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+}
+
+/* Error message styling */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    display: flex; /* Hidden initially */
+}
+
+/* Ensure input-field and error message are stacked properly */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adds spacing between inputs */
+}
+
+/* Style for invalid input field */
+.input-field input.invalid {
+    border: 2px solid red;
+    background-color: #ffe6e6; /* Light red background */
+    transition: border 0.3s ease-in-out;
+}
+
+/* Style for valid input field */
+.input-field input.valid {
+    border: 2px solid green;
+    background-color: #e6ffe6; /* Light green background */
+    transition: border 0.3s ease-in-out;
+}
+
+
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Alert Message */
+.alert {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Link Styling */
+p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #fff;
+}
+
+p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}

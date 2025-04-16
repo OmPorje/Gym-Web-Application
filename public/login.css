@@ -1,0 +1,107 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Center the form vertically and horizontally */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background: #f3f4f6;
+    flex-direction: column;
+}
+
+ .title{
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Form container */
+.container {
+    background: #fff;
+    padding: 30px;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-image: linear-gradient(rgba(0,0,50,0.8), rgba(0,0,50,0.8)), url(Loginpage/background.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/* Form title */
+.container h2 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Input fields */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.input-field i {
+    margin-right: 10px;
+    color: #333;
+}
+
+.input-field input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+}
+
+/* Submit button */
+button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Link to login or register */
+.container p {
+    margin-top: 10px;
+}
+
+.container a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.container a:hover {
+    text-decoration: underline;
+}
